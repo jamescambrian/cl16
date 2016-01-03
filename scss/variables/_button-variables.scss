@@ -34,13 +34,13 @@ $btn-primary: (
 
 // CTA
 $btn-cta: (
-  color                 : $white,
-  bg                    : $blackBean100,
-  border                : $blackBean100,
+  color                 : $midnightBlue100,
+  bg                    : $sunglow100,
+  border                : $sunglow100,
   hover: (
-    color               : $white,
-    bg                  : $blackBeanDark,
-    border              : $blackBeanDark
+    color               : $midnightBlue100,
+    bg                  : $ctaOrange,
+    border              : $ctaOrange
   )
 );
 
