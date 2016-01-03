@@ -196,6 +196,14 @@ body {
 	background:white;
 	// box-shadow: 1px 1px 3px $light-grey;
 }
+//white boxes 
+.wrap--blue{
+	background:$midnightBlue100;
+	h5{
+		color: white;
+		margin: 0;
+	}
+}
 .wrap--yellow{
 	background:$sunglow100;
 	h3{
@@ -307,6 +315,11 @@ body {
 			filter: brightness(65%);
 		}
 	}
+}
+
+.social__share{
+	padding:1rem 4rem;
+	li{padding:0.7rem;}
 }
 //small image aligned left
 .alignleft--round{

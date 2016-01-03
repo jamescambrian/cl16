@@ -156,7 +156,27 @@
 								<p>Aline, 27 Jahre jung, aus Berlin und absoluter Fashion-Victim! Will seit einem Auslandssemester in Bangkok ständig zurück, liebt fremde Länder und Kulturen und ihre beiden Stubentiger Tom&Jerry.</p>
 							</div>
 						</div>
-						<div class="four columns wrap--white innerpad">Aline, 27 Jahre jung, aus Berlin und absoluter Fashion-Victim! Will seit einem Auslandssemester in B</div>
+						<div class="four columns wrap--blue innerpad"><h5>Zeig’s deinen Freunden:</h5></div>
+						<div class="four columns wrap--white">
+							<ul class="social__share">
+								<li class="one-third column">
+										<a href="http://www.facebook.com/sharer.php" class="popup">
+										<img src="img/icon__social--facebook.svg">
+									</a>
+								</li>
+								<li class="one-third column">
+										<a href="https://plus.google.com/share?url=http://example.com" class="popup">
+										<img src="img/icon__social--gplus.svg">
+									</a>
+								</li>
+								<li class="one-third column">
+										<a href="http://twitter.com/share" class="popup">
+										<img src="img/icon__social--twitter.svg">
+									</a>
+								</li>
+						</ul>
+
+						</div>
 					</div>
 				</main>
 				
@@ -164,5 +184,27 @@
 					<h2>Bestelle jetzt bei einem der besten Lieferservices</h2>
 				</div>
 		<!-- /main content -->  
+
+		<!-- POPUP -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+  $('.popup').click(function(event) {
+    var width  = 575,
+        height = 400,
+        left   = ($(window).width()  - width)  / 2,
+        top    = ($(window).height() - height) / 2,
+        url    = this.href,
+        opts   = 'status=1' +
+                 ',width='  + width  +
+                 ',height=' + height +
+                 ',top='    + top    +
+                 ',left='   + left;
+    
+    window.open(url, 'popup', opts);
+ 
+    return false;
+  });
+</script>
 	</body>
 </html>

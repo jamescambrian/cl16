@@ -1518,6 +1518,12 @@ body {
 .wrap--white {
   background: white; }
 
+.wrap--blue {
+  background: #343b46; }
+  .wrap--blue h5 {
+    color: white;
+    margin: 0; }
+
 .wrap--yellow {
   background: #ffc713; }
   .wrap--yellow h3 {
@@ -1629,6 +1635,11 @@ body {
     .city-list img:hover {
       -webkit-filter: brightness(65%);
       filter: brightness(65%); }
+
+.social__share {
+  padding: 1rem 4rem; }
+  .social__share li {
+    padding: 0.7rem; }
 
 .alignleft--round {
   float: left;
