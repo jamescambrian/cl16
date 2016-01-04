@@ -179,6 +179,34 @@
 						</div>
 					</div>
 				</main>
+
+
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+
+<form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+	<input type=hidden name="oid" value="00D20000000CSSJ">
+	<input type=hidden name="retURL" value="http://PLEASE PUT HERE THE RETURN URL">
+	<input type=hidden name="recordType" id="recordType" value="01220000000MEKt">
+	<input type=hidden name="lead_source" id="lead_source" value="Beste Lieferservice Kampagne">
+	<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+	<!--  these lines if you wish to test in debug mode.                          -->
+	<!--  <input type="hidden" name="debug" value=1>                              -->
+	<!--  <input type="hidden" name="debugEmail"                                  -->
+	<!--  value="boglarka.nagy@deliveryhero.com">                                 -->
+	Restaurant Name:<input  id="00N20000002kNZU" maxlength="50" name="00N20000002kNZU" size="20" type="text" /><br>
+	<label for="street">Straße</label><textarea name="street"></textarea><br>
+	<label for="city">Stadt</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
+	<label for="zip">PLZ</label><input  id="zip" maxlength="20" name="zip" size="20" type="text" /><br>
+	<input type="submit" name="submit">
+</form>
+
+
 				
 				<div class="wrap--yellow cta__bottom">
 					<h2>Bestelle jetzt bei einem der besten Lieferservices</h2>
