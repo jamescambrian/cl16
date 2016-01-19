@@ -1,17 +1,19 @@
-# LH Snippet Page#
-_[GRAPHICS-2085](https://devheld.jira.com/browse/GRAPHICS-2305)_
+# Cambrian Line Theme#
 
 ###Description###
 
-LH Award: Campaign Landingpage
+Cambrian Line WP Theme
 
 ###Dependencies:###
 
-- Lieferheld API
+- Wordpress
+- Jquery
+- Sass
+- Gulp
 
-###Instructions:###
+###Instructions to initialize gulp files:###
 
-1. Navigate to repository folder in command line: `cd Sites/2305_lh_award_lp`
+1. Navigate to repository folder in command line: `site`
 
   - `sudo gem install sass`
   - `sudo gem install scss-lint`
