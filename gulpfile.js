@@ -13,7 +13,7 @@ var gulpIgnore = require('gulp-ignore');
 var uglify = require('gulp-uglify');
 
 gulp.task('sass', function() {
-  return sass('./scss/main.scss', {
+  return sass('./scss/screen.scss', {
     sourcemap: true
   })
   .pipe(sourcemaps.write('./', {

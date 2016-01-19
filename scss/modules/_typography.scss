@@ -1,0 +1,95 @@
+// global fonts
+$font__sans-serif:"Lato",sans-serif;
+$font__serif:"Merriweather", serif;
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 600; 
+  font-family: $font__sans-serif;
+}
+h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 2.6rem; line-height: 1.25; letter-spacing: -.0rem; }
+h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  h1 { font-size: 5.0rem; }
+  h2 { font-size: 2.5rem; }
+  h3 { font-size: 3.6rem; }
+  h4 { font-size: 3.0rem; }
+  h5 { font-size: 2.4rem; }
+  h6 { font-size: 1.5rem; }
+}
+
+p {
+    margin-top: 0;
+    color: $color__black--80;
+    font-family: $font__serif;
+    font-weight: 300;
+    letter-spacing: 0.03rem;
+    @media (#{$bp-larger-than-mobile}) {font-size: 1.65rem;}
+    @media (#{$bp-larger-than-phablet}) {font-size: 1.55rem;}
+    @media (#{$bp-larger-than-desktop}) {font-size: 1.65rem;}
+}
+
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: #1EAEDB;
+  @include fade(0.3s);
+  cursor: pointer;
+  text-decoration: none;
+    &:hover {
+    color: #4fbfe3; }
+}
+:focus{
+  background-color: transparent;
+  outline:none;
+}
+
+/* SPECIAL CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h2.underline{
+  @media (#{$bp-larger-than-mobile}) {
+    text-align:center;
+  }
+  @media (#{$bp-larger-than-tablet}) {
+    text-align: left;
+  }
+  > a{ 
+    position: relative;
+    left: 0;
+    color: #231f20;
+    text-decoration: none;
+    padding-bottom: 1.75rem;
+    display: block;
+    margin-bottom: 3.75rem;
+    &:hover{}
+    &:before{
+      content: "";
+      position:absolute;
+      width:100%;
+      height:1px;
+      bottom:0;
+      right:0;
+      background-color: #000;
+      visibility: visible;
+      -webkit-transform:scaleX(1);
+      transform:scaleX(1);
+      -webkit-transform-origin:0;
+      @include fade(0.5s);
+    }
+    &:hover:before{
+      visibility:hidden;
+      -webkit-transform:scaleX(0);
+      transform:scaleX(0);
+    }
+  }
+}
