@@ -1302,8 +1302,7 @@ ul.release-covers {
 .post__feat-img {
   height: 500px;
   background-size: cover !important;
-  background-attachment: fixed !important;
-  background-position: center center !important;
+  background-position: center top !important;
   margin-bottom: 4rem; }
 
 .post__bandcamp-player {
@@ -1341,7 +1340,7 @@ ul.release-covers {
 
 /* FOOTER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-footer {
+footer.foot {
   margin-top: 6rem;
   padding-bottom: 3rem;
   min-height: 300px;
@@ -1350,38 +1349,38 @@ footer {
   color: #fff;
   float: left;
   width: 100%; }
-  footer .column {
+  footer.foot .column {
     margin-left: 0; }
   @media (min-width: 320px) {
-    footer .one-third:nth-child(2) {
+    footer.foot .one-third:nth-child(2) {
       margin: 3rem 0; } }
   @media (min-width: 750px) {
-    footer .one-third:nth-child(2) {
+    footer.foot .one-third:nth-child(2) {
       margin: 0; } }
   @media (min-width: 320px) {
-    footer .central {
+    footer.foot .central {
       border: 0; } }
   @media (min-width: 750px) {
-    footer .central {
+    footer.foot .central {
       border-left: solid white 1px;
       border-right: solid white 1px; } }
-  footer h3 {
+  footer.foot h3 {
     font-size: 1.7rem;
     letter-spacing: 0.07rem;
     font-weight: 600;
     margin-bottom: 2rem; }
-  footer .container {
+  footer.foot .container {
     padding-top: 5rem;
     padding-left: 8rem; }
-  footer ul {
+  footer.foot ul {
     box-sizing: border-box; }
-    footer ul li {
+    footer.foot ul li {
       list-style-type: none;
       margin: 0;
       line-height: 3rem;
       font-family: "Merriweather", serif;
       box-sizing: border-box; }
-      footer ul li a {
+      footer.foot ul li a {
         color: #fffef3;
         text-decoration: none;
         list-style: none; }
@@ -1433,6 +1432,12 @@ footer {
   content: "";
   display: table;
   clear: both; }
+
+.covers:nth-child(3n+4) {
+  margin-left: 0; }
+
+.orange {
+  background-color: orange; }
 
 
 

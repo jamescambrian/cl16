@@ -22,7 +22,7 @@
 <div id="container">
 <header id="header" class="header"><div class="menu-btn">&#9776; Menu</div>
   <div class="container">
-    <a href="#"><img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.svg" data-pin-nopin="true"></a>
+    <a href="<?php echo site_url(); ?>"><img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.svg" data-pin-nopin="true"></a>
   </div>
 </header>
 <!-- Top Nav Ends -->
