@@ -491,7 +491,7 @@ figcaption{
 .post__feat-img{
   height: 500px;
   background-size:cover!important;
-  background-position:center top!important;
+  background-position:center center!important;
   margin-bottom: 4rem;
 }
 .post__bandcamp-player{
@@ -645,10 +645,31 @@ footer.foot{
 
 
   .covers{
+    h2{
+      font-size: 2rem;
+      display: block;
+      max-height: 25px;
+      overflow: hidden;
+    }
+    p{
+      display: block;
+      max-height: 80px;
+      overflow: hidden;
+    }
+    img{
+      @include fade(0.3s);
+      &:hover{
+        -webkit-filter: brightness(55%);
+        filter: brightness(55%);}
+      }
     &:nth-child(3n+4){
     margin-left: 0;
-
     }
+  }
+
+  .fuller{
+    padding:4%;
+    padding-top:16rem;
   }
 
   .orange{

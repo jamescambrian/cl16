@@ -66,3 +66,28 @@ return $count;
 }
 }
 
+function get_excerpt($count){
+  $permalink = get_permalink($post->ID);
+  $excerpt = get_the_content();
+  $excerpt = strip_tags($excerpt);
+  $excerpt = substr($excerpt, 0, $count);
+  // $excerpt = $excerpt.'... <br><a href="'.$permalink.'">more</a>';
+  return $excerpt;
+}
+
+add_filter( 'post_thumbnail_html', 'my_post_image_html', 10, 3 );
+function my_post_image_html( $html, $post_id, $post_image_id ) {
+	$html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
+	return $html;
+}
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes_1');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes_2');
+
+function posts_link_attributes_1() {
+    return 'class="button button-read-more button-read-more-cat hvr-sweep-to-right"';
+}
+function posts_link_attributes_2() {
+    return 'class="button button-read-more button-read-more-cat hvr-sweep-to-right"';
+}
+

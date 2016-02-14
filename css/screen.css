@@ -653,6 +653,10 @@ input[type="button"].button-primary:focus {
     color: #231f20;
     background: none; }
 
+.button-read-more-cat {
+  max-width: 170px;
+  margin-left: 0.5rem !important; }
+
 /* Sweep To Right */
 .hvr-sweep-to-right {
   display: inline-block;
@@ -1302,7 +1306,7 @@ ul.release-covers {
 .post__feat-img {
   height: 500px;
   background-size: cover !important;
-  background-position: center top !important;
+  background-position: center center !important;
   margin-bottom: 4rem; }
 
 .post__bandcamp-player {
@@ -1433,8 +1437,27 @@ footer.foot {
   display: table;
   clear: both; }
 
+.covers h2 {
+  font-size: 2rem;
+  display: block;
+  max-height: 25px;
+  overflow: hidden; }
+.covers p {
+  display: block;
+  max-height: 80px;
+  overflow: hidden; }
+.covers img {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+  .covers img:hover {
+    -webkit-filter: brightness(55%);
+    filter: brightness(55%); }
 .covers:nth-child(3n+4) {
   margin-left: 0; }
+
+.fuller {
+  padding: 4%;
+  padding-top: 16rem; }
 
 .orange {
   background-color: orange; }
