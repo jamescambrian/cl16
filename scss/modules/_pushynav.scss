@@ -26,12 +26,14 @@
     top:0;
     z-index:9999;
     background: $color__black;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: bold;
     overflow: auto;
     -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
     a{
     	display: block;
+        font-family: $font__sans-serif;
+        font-weight: 600;
     	color: $color__background;
     	padding: 15px 40px;
     	box-sizing:border-box;

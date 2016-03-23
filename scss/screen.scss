@@ -9,6 +9,7 @@
 @import 'modules/pushynav';
 @import 'modules/buttons';
 @import 'modules/forms';
+@import 'mixins';
 @import 'modules/wp-standards';
 
 /* BASIC STYLES
@@ -47,9 +48,10 @@ ul ol,
 ol ol,
 ol ul {
   margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%; }
+  font-size: 90%;
+}
 li {
-  margin-bottom: 1rem; }
+  margin-bottom: 0.75rem;font-family: $font__serif; font-weight:200; }
 
 /* CODE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -170,9 +172,10 @@ header{
       }
 }
 header.smaller{
-  height: 0.1rem;
+  height: 0rem;
+  margin-top: -20px;
   .logo{
-    max-width:1%;
+    max-width:0%;
     opacity: 0;
     position: relative;
     top:0rem;}
@@ -187,7 +190,7 @@ header.smaller{
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .color-wrap{
   padding-top: 3.75rem;
-  margin-bottom: 3.75rem;
+  // margin-bottom: 3.75rem;
 }
 .color-wrap--coral{
   @media (#{$bp-larger-than-mobile}) {padding-bottom: 0rem;}
@@ -205,10 +208,26 @@ header.smaller{
   background-color:$color__yellow;
 }
 
+.color-wrap--railblue{
+  @media (#{$bp-larger-than-mobile}) {padding-bottom: 0rem;}
+  @media (#{$bp-larger-than-tablet}) {padding-bottom: 3rem;}
+  float:left;
+  width: 100%;
+  background-color:$color__railblue;
+}
+
+.color-wrap--railred{
+  @media (#{$bp-larger-than-mobile}) {padding-bottom: 0rem;}
+  @media (#{$bp-larger-than-tablet}) {padding-bottom: 3rem;}
+  float:left;
+  width: 100%;
+  background-color:$color__railred;
+}
+
 /* PODCASTS & RELEASES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .cover-list{
-  margin-bottom:3rem;
+  margin:0;
   display: block;
   figure{
     margin: 0rem;
@@ -392,7 +411,7 @@ figcaption{
   float:left; 
   display:block;
   width:50%;
-  background-color:rgba(255, 254, 243, 1);
+  background-color:$color__background;
   position: relative;
 }
 .post__large--excerpt{
@@ -404,7 +423,7 @@ figcaption{
     transform: translateY(0%);}
     @media (#{$bp-larger-than-tablet}) {padding: 6rem 3rem;}
     @media (#{$bp-larger-than-desktop}) {
-      padding: 0 8rem;
+      padding: 0 10rem;
       position: relative;
       top: 55%;
       transform: translateY(-50%);}
@@ -414,6 +433,7 @@ figcaption{
     background-position:center center!important;
     repeat: no-repeat;
     overflow: hidden;
+    @include fade(0.3s);
     .transparent-link{
       display:block;
       @media (#{$bp-larger-than-mobile}) {
@@ -426,11 +446,8 @@ figcaption{
           height: 100%;}
           }
         &:hover{
-        -webkit-animation: zoomBackground 1s ease 1;
-        -moz-animation: zoomBackground 1s ease 1;
-        animation: zoomBackground 1s ease 1;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
+        -webkit-filter: brightness(55%);
+        filter: brightness(55%);
         }
         }
 .post__excerpt{
@@ -484,8 +501,16 @@ figcaption{
     @media (#{$bp-larger-than-desktop}) {text-align:left;}
     margin-bottom: 3rem;
   }
-  p:first-child:first-letter{
-    color: $color__railred;
+  h3,h5{
+    font-size: 1.95rem;
+    letter-spacing: 0.002rem;
+  }
+  a{
+    border-bottom:1px solid $color__railred;
+    &:hover{
+      color:$color__black;
+      border-bottom: 1px solid $color__black;
+    }
   }
 }
 .post__feat-img{
@@ -501,11 +526,30 @@ figcaption{
   margin-bottom: 2rem;
 }
 
+.post__tags{
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: $font__sans-serif;
+  padding-bottom: 1.8rem;
+    a{
+    color:$color__black--80;
+    border-bottom:1px solid $color__background;
+    white-space: nowrap;
+    &:hover{
+      color:$color__railred;
+      border-bottom:1px solid $color__railred;
+    }
+  }
+}
+
 .social-shares{
   li{
     width:40px;
     display: inline-block;
     margin-right:1rem;
+    a, a:hover{
+      border:none;
+    }
   }
 }
 
@@ -545,11 +589,11 @@ figcaption{
 /* FOOTER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 footer.foot{
-  margin-top: 6rem;
+  // margin-top: 6rem;
   padding-bottom: 3rem;
-  min-height: 300px;
+  min-height: 200px;
   text-align:center;
-  background: $color__railblue;
+  background: $color__black;
   color: #fff;
   float: left;
   width:100%;
@@ -646,10 +690,16 @@ footer.foot{
 
   .covers{
     h2{
-      font-size: 2rem;
+      font-size: 1.8rem;
       display: block;
       max-height: 25px;
-      overflow: hidden;
+      overflow: hidden; 
+      a{
+        color: $color__black;
+        &:hover{
+        color: $color__railred;
+        }
+      }
     }
     p{
       display: block;
@@ -658,9 +708,10 @@ footer.foot{
     }
     img{
       @include fade(0.3s);
-      &:hover{
-        -webkit-filter: brightness(55%);
-        filter: brightness(55%);}
+      // &:hover{
+      //   -webkit-filter: brightness(55%);
+      //   filter: brightness(55%);
+      // }
       }
     &:nth-child(3n+4){
     margin-left: 0;

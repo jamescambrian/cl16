@@ -6,16 +6,18 @@
 <section id="content" role="main" class="fuller">
 <div class="row">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post();{
-	echo '<div class="one-third column covers">';
+	echo '<div class="four columns covers fade-in-element">';
 	the_post_thumbnail('500,500', array( 'class' => 'u-full-width' )) ;
-	echo'<div class="post__excerpt"><h2>'; 
+	echo'<div class="post__excerpt">';
+	echo'<h2><a href="'; 
+	the_permalink();
+	echo'">';
 	the_title();
-	echo '</h2>';
+	echo '</h2></a>	';
 	echo '<p>';
 	echo  get_excerpt(140);
 	echo '</p></div>';
 	echo "</div>";
-
 }
 ?>  
 

@@ -6,6 +6,7 @@ load_theme_textdomain( 'blankslate', get_template_directory() . '/languages' );
 add_theme_support( 'title-tag' );
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'post-thumbnails' );
+add_image_size( 'top-banner', 1420, 500, array( 'center', 'center' ) ); // Hard crop left top
 global $content_width;
 if ( ! isset( $content_width ) ) $content_width = 640;
 register_nav_menus(
@@ -71,7 +72,7 @@ function get_excerpt($count){
   $excerpt = get_the_content();
   $excerpt = strip_tags($excerpt);
   $excerpt = substr($excerpt, 0, $count);
-  // $excerpt = $excerpt.'... <br><a href="'.$permalink.'">more</a>';
+  $excerpt = $excerpt.'....';
   return $excerpt;
 }
 
@@ -90,4 +91,5 @@ function posts_link_attributes_1() {
 function posts_link_attributes_2() {
     return 'class="button button-read-more button-read-more-cat hvr-sweep-to-right"';
 }
+
 

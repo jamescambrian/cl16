@@ -56,7 +56,7 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: #1EAEDB;
+  background-color: $color__background;
   border-color: #1EAEDB; }
 
 .button-white{
@@ -80,6 +80,7 @@ input[type="button"].button-primary:focus {
 .button-read-more-feat{
 float:none;
 margin: 0 auto;
+background:$color__background;
 }
 .button-infinite{
 text-align:left;
@@ -104,6 +105,17 @@ background:none;
 max-width: 170px;
 margin-left: 0.5rem!important;
 }
+
+
+.button__edit {
+    background: black;
+    padding: 1rem 2rem;
+    display: inline-block;
+    a{
+      color: #fff;
+    }
+}
+
 /* Sweep To Right */
 .hvr-sweep-to-right {
   display: inline-block;
