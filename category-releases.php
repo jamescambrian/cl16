@@ -10,10 +10,10 @@
 	the_permalink();
 	echo'">';
 	the_title();
-	echo '</h2></a>	';
-	echo '<p>';
-	echo  get_excerpt(140);
-	echo '</p></div>';
+	echo '</h2>';
+	$key="Artist"; echo get_post_meta($post->ID, $key, true);
+	echo '</a>';
+	echo '</div>';
 	echo "</div>";
 }
 ?> 

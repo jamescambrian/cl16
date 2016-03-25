@@ -1,6 +1,6 @@
 <section class="entry-content">
 <?php $featsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'top-banner', array( 5600,1000 ),  true, '' ); ?>
-	<div class="post__feat-img fade-in-element" style="background:url('<?php echo $featsrc[0]; ?>')"></div>
+	<div class="post__feat-img fade-in-element" style="background:url('<?php echo $featsrc[0]; ?>');"></div>
 	<div class="container">
 		<div class="nine columns post fade-in-element">
 			<div class="row">

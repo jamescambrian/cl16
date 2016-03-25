@@ -1320,6 +1320,8 @@ ul.release-covers {
   -webkit-transform: translateX(-50%);
   position: relative;
   left: 50%; }
+  .post .container {
+    padding: 0 1rem; }
   .post h2 {
     margin-bottom: 3rem; }
     @media (min-width: 320px) {
@@ -1496,10 +1498,19 @@ footer.foot {
     color: #231f20; }
     .covers h2 a:hover {
       color: #cf4a37; }
+.covers a {
+  color: #231f20;
+  padding-bottom: 3.5rem; }
+  .covers a:hover {
+    color: #cf4a37; }
+.covers h2.releases {
+  margin-bottom: 0rem;
+  padding-bottom: 0.25rem; }
 .covers p {
   display: block;
   max-height: 80px;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-top: 0.7rem; }
 .covers img {
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }

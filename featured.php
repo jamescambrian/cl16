@@ -35,7 +35,7 @@ while($catquery->have_posts()) : $catquery->the_post();
             <?php the_post_thumbnail( 'full', array( 'class' => 'u-full-width' ) ); ?>
             <a href="<?php the_permalink(); ?>">
             <figcaption><!--  <span class="button-play"></span><br>  -->
-              <span class="showtitle"><?php the_title(); ?><br><span class="showtitle__dj"><?php $key="djname"; echo get_post_meta($post->ID, $key, true); ?></span></span>
+              <span class="showtitle"><?php the_title(); ?><br><span class="showtitle__dj"><?php $key="Artist"; echo get_post_meta($post->ID, $key, true); ?></span></span>
             </figcaption>
           </a>
         </figure>
