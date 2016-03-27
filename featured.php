@@ -1,5 +1,5 @@
 <?php
-$catquery = new WP_Query( 'cat=2&posts_per_page=1' );
+$catquery = new WP_Query( 'cat=1&posts_per_page=1' );
 while($catquery->have_posts()) : $catquery->the_post();
 ?>
 <!-- Featured Post Begins -->
@@ -27,7 +27,7 @@ while($catquery->have_posts()) : $catquery->the_post();
   <div class="row cover-list">
     <ul class="podcast-covers">
       <?php
-      $catquery = new WP_Query( 'cat=5&posts_per_page=3' );
+      $catquery = new WP_Query( 'cat=63&posts_per_page=3' );
       while($catquery->have_posts()) : $catquery->the_post();
       ?>
       <li class="one-third column fade-in-element">
@@ -48,10 +48,10 @@ while($catquery->have_posts()) : $catquery->the_post();
 </div>
 <br class="u-cf"/>
 <?php
-$catquery = new WP_Query( 'cat=6&posts_per_page=1' );
+$catquery = new WP_Query( 'cat=424&posts_per_page=1' );
 while($catquery->have_posts()) : $catquery->the_post();
 ?>
-<!-- Featured Post Begins -->
+<!-- Featured Post Begins MASSIVE--> 
 <div class="post__large fade-in-element">
   <a href="<?php the_permalink(); ?>">
     <?php $featsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' ); ?>
