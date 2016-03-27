@@ -20,7 +20,7 @@ while($catquery->have_posts()) : $catquery->the_post();
 </div>
 <?php endwhile; ?>
 <?php wp_reset_query(); ?>
-<!-- Featured Post ends -->
+<!-- Featured Post ends --> this wont be here
 <!-- Radio Section Begins -->
  <div class="color-wrap color-wrap--railred">
   <div class="container">
