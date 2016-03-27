@@ -11,7 +11,7 @@ while($catquery->have_posts()) : $catquery->the_post();
   </a>
   <div class="post__large--feat">
     <div class="post__large--excerpt">
-      <h2>once more into the oh lord<a href="<?php the_permalink(); ?>" class="titles"><?php the_title(); ?></a></h2>
+      <h2><a href="<?php the_permalink(); ?>" class="titles"><?php the_title(); ?></a></h2>
       <?php the_excerpt(); ?>
       <a class="button button-read-more button-read-more-feat hvr-sweep-to-right " href="<?php the_permalink(); ?> ">read more</a>
     </div>
@@ -20,7 +20,7 @@ while($catquery->have_posts()) : $catquery->the_post();
 </div>
 <?php endwhile; ?>
 <?php wp_reset_query(); ?>
-<!-- Featured Post ends --> this wont be here
+<!-- Featured Post ends -->
 <!-- Radio Section Begins -->
  <div class="color-wrap color-wrap--railred">
   <div class="container">
