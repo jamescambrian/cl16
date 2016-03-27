@@ -11,7 +11,7 @@ while($catquery->have_posts()) : $catquery->the_post();
   </a>
   <div class="post__large--feat">
     <div class="post__large--excerpt">
-      <h2><a href="<?php the_permalink(); ?>" class="titles"><?php the_title(); ?></a></h2>
+      <h2>hello james<a href="<?php the_permalink(); ?>" class="titles"><?php the_title(); ?></a></h2>
       <?php the_excerpt(); ?>
       <a class="button button-read-more button-read-more-feat hvr-sweep-to-right " href="<?php the_permalink(); ?> ">read more</a>
     </div>
@@ -51,7 +51,7 @@ while($catquery->have_posts()) : $catquery->the_post();
 $catquery = new WP_Query( 'cat=424&posts_per_page=1' );
 while($catquery->have_posts()) : $catquery->the_post();
 ?>
-<!-- Featured Post Begins MASSIVE--> 
+<!-- Featured Post Begins--> 
 <div class="post__large fade-in-element">
   <a href="<?php the_permalink(); ?>">
     <?php $featsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' ); ?>
