@@ -1507,9 +1507,6 @@ footer.foot {
   margin-bottom: 0rem;
   padding-bottom: 0.25rem; }
 .covers p {
-  display: block;
-  max-height: 80px;
-  overflow: hidden;
   padding-top: 0.7rem; }
 .covers img {
   -webkit-transition: all 0.3s;
