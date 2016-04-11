@@ -163,12 +163,16 @@ header{
     animation-duration: 0.3s;
     @include fade(0.4s);
     .logo{
-    position: relative;
-    top:0.2rem;
+    position:relative;
+    margin-top: 0.3rem;
+    left:-1rem;
     @include fade(0.3s);
-    @media (#{$bp-larger-than-mobile}) {max-width: 220px;}
-    @media (#{$bp-larger-than-phablet}) {max-width: 250px; top:0rem;}
-    @media (#{$bp-larger-than-tablet}) {max-width: 400px;}
+    @media (#{$bp-larger-than-mobile}) {max-width: 40px;}
+    @media (#{$bp-larger-than-phablet}) {max-width: 40px; top:0rem;}
+    @media (#{$bp-larger-than-tablet}) {max-width: 70px;}
+    &:hover{
+      opacity: 0.8;
+    }
       }
 }
 header.smaller{
@@ -719,8 +723,9 @@ footer.foot{
       padding-bottom:0.25rem;
     }
     p{
-      // display: block;
-      // overflow: hidden;
+      display: block;
+      overflow: hidden;
+      max-height: 95px;
       padding-top:0.7rem;
     }
     img{
@@ -736,8 +741,10 @@ footer.foot{
   }
 
   .fuller{
-    padding:4%;
-    padding-top:16rem;
+    @media (#{$bp-larger-than-mobile}) {padding:2%;
+    padding-top:4rem;}
+    @media (#{$bp-larger-than-phablet}) {padding:4%;
+    padding-top:16rem;}
   }
 
   .orange{

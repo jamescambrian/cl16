@@ -1,14 +1,16 @@
 /* Menu Button */
 .menu-btn{
 	position:absolute;
+    z-index: 9999;
 	top:35px;
+    font-size: 3rem;
 	margin-bottom: 30px;
 	color: $color__background;
 	text-align: center;
 	cursor: pointer;
 	@include fade(0.3s);
-	@media (#{$bp-larger-than-mobile}) {top:18px; left:15px;}
-	@media (#{$bp-larger-than-tablet}) {top:35px; left:30px;}
+	@media (#{$bp-larger-than-mobile}) {top:8px; left:15px;}
+	@media (#{$bp-larger-than-tablet}) {top:25px; left:30px;}
 }
 .menu-btn:hover{
 	color: $color__black;
@@ -26,22 +28,27 @@
     top:0;
     z-index:9999;
     background: $color__black;
-    font-size: 1.5rem;
-    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 900;
     overflow: auto;
     -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
     a{
     	display: block;
         font-family: $font__sans-serif;
-        font-weight: 600;
+        letter-spacing: 0.15rem;
+        font-weight: 900;
     	color: $color__background;
-    	padding: 15px 40px;
-    	box-sizing:border-box;
+        padding: 1rem 2.3rem;
+        box-sizing:border-box;
     	text-decoration: none;
     	&:hover{
     		background: $color__railred;
     		color: #FFF;
     	}
+    }
+    ul{
+        margin-top: 5rem;
     }
 }
 
@@ -94,7 +101,7 @@
     bottom: 0;
     left: 0;
     z-index: 9998;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.6);
     -webkit-animation: fade 500ms; 
     -moz-animation: fade 500ms; 
     -o-animation: fade 500ms;

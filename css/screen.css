@@ -405,7 +405,9 @@ h2.underline > a {
 /* Menu Button */
 .menu-btn {
   position: absolute;
+  z-index: 9999;
   top: 35px;
+  font-size: 3rem;
   margin-bottom: 30px;
   color: #fffef9;
   text-align: center;
@@ -414,11 +416,11 @@ h2.underline > a {
   transition: all 0.3s; }
   @media (min-width: 320px) {
     .menu-btn {
-      top: 18px;
+      top: 8px;
       left: 15px; } }
   @media (min-width: 750px) {
     .menu-btn {
-      top: 35px;
+      top: 25px;
       left: 30px; } }
 
 .menu-btn:hover {
@@ -437,22 +439,26 @@ h2.underline > a {
   top: 0;
   z-index: 9999;
   background: #231f20;
-  font-size: 1.5rem;
-  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 900;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   /* enables momentum scrolling in iOS overflow elements */ }
   .pushy a {
     display: block;
     font-family: "Lato", sans-serif;
-    font-weight: 600;
+    letter-spacing: 0.15rem;
+    font-weight: 900;
     color: #fffef9;
-    padding: 15px 40px;
+    padding: 1rem 2.3rem;
     box-sizing: border-box;
     text-decoration: none; }
     .pushy a:hover {
       background: #cf4a37;
       color: #FFF; }
+  .pushy ul {
+    margin-top: 5rem; }
 
 /* Menu Movement */
 .pushy-left {
@@ -495,7 +501,7 @@ h2.underline > a {
   bottom: 0;
   left: 0;
   z-index: 9998;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   -webkit-animation: fade 500ms;
   -moz-animation: fade 500ms;
   -o-animation: fade 500ms;
@@ -965,19 +971,22 @@ header {
       height: 8rem; } }
   header .logo {
     position: relative;
-    top: 0.2rem;
+    margin-top: 0.3rem;
+    left: -1rem;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
     @media (min-width: 320px) {
       header .logo {
-        max-width: 220px; } }
+        max-width: 40px; } }
     @media (min-width: 550px) {
       header .logo {
-        max-width: 250px;
+        max-width: 40px;
         top: 0rem; } }
     @media (min-width: 750px) {
       header .logo {
-        max-width: 400px; } }
+        max-width: 70px; } }
+    header .logo:hover {
+      opacity: 0.8; }
 
 header.smaller {
   height: 0rem;
@@ -1507,6 +1516,9 @@ footer.foot {
   margin-bottom: 0rem;
   padding-bottom: 0.25rem; }
 .covers p {
+  display: block;
+  overflow: hidden;
+  max-height: 95px;
   padding-top: 0.7rem; }
 .covers img {
   -webkit-transition: all 0.3s;
@@ -1514,9 +1526,14 @@ footer.foot {
 .covers:nth-child(3n+4) {
   margin-left: 0; }
 
-.fuller {
-  padding: 4%;
-  padding-top: 16rem; }
+@media (min-width: 320px) {
+  .fuller {
+    padding: 2%;
+    padding-top: 4rem; } }
+@media (min-width: 550px) {
+  .fuller {
+    padding: 4%;
+    padding-top: 16rem; } }
 
 .orange {
   background-color: orange; }
