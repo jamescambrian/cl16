@@ -45,11 +45,15 @@
     	&:hover{
     		background: $color__railred;
     		color: #FFF;
+            padding-left:3.8rem;
     	}
+
     }
     ul{
-        margin-top: 5rem;
+        margin-top: 4rem;
+        
     }
+
 }
 
 /* Menu Movement */
@@ -137,7 +141,7 @@
     width: auto;
     margin-right: 0.6rem;
     a{padding:0;
-        &:hover{background-color:none; background:none;}
+        &:hover{background-color:none; background:none; padding-left:0;}
     }
     img{
         width:42px; 

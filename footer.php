@@ -16,8 +16,10 @@
     </div>
 </div>
 </footer>
+<a class="scrolltop" id="scrolltop" href="#top">oi</a>
 </div>
 <?php wp_footer(); ?>
+
 
 <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– --> 

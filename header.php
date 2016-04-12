@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" href="<?php echo get_bloginfo('template_directory'); ?>/images/favicon.png">
 <?php wp_head(); ?>
 </head>
-<body>
+<body id="top">
 <nav id="menu" role="navigation" class="pushy pushy-left">
 <img class="" style="max-width:200px; margin-left:2rem;" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.svg" data-pin-nopin="true">
 <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>

@@ -167,6 +167,12 @@ header{
     margin-top: 0.3rem;
     left:-1rem;
     @include fade(0.3s);
+    -webkit-animation: fadein 1s 1 0.55s forwards; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s 1 0.55s forwards; /* Firefox < 16 */
+    -ms-animation: fadein 1s 1 0.55s forwards; /* Internet Explorer */
+    -o-animation: fadein 1s 1 0.55s forwards; /* Opera < 12.1 */ 
+    animation: fadein 1s 1 0.55s forwards;
+    opacity: 0;
     @media (#{$bp-larger-than-mobile}) {max-width: 40px;}
     @media (#{$bp-larger-than-phablet}) {max-width: 40px; top:0rem;}
     @media (#{$bp-larger-than-tablet}) {max-width: 70px;}
@@ -631,7 +637,8 @@ footer.foot{
   }
   .container{
     padding-top: 5rem;
-    padding-left:8rem;
+   @media (#{$bp-larger-than-tablet}) { 
+    padding-left:8rem;}
   }
   ul{
     box-sizing:border-box;
@@ -749,4 +756,11 @@ footer.foot{
 
   .orange{
     background-color:orange;
+  }
+
+  .scrolltop{
+    position:fixed;
+    bottom:3rem;
+    right: 2rem;
+    background:green;
   }
