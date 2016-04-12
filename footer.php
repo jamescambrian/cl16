@@ -14,9 +14,11 @@
         <h3>Follow Us</h3>
         <?php wp_nav_menu( array( 'menu' => 'Follows' ) ); ?>
     </div>
+    <a class="scrolltop" id="scrolltop" href="#top"><img class="u-full-width" src="<?php echo get_bloginfo('template_directory'); ?>/images/scroll.png"/></a>
+
 </div>
 </footer>
-<a class="scrolltop" id="scrolltop" href="#top">oi</a>
+
 </div>
 <?php wp_footer(); ?>
 
@@ -76,6 +78,27 @@
     window.open(url, 'popup', opts);
  
     return false;
+  });
+</script>
+<!-- SCROLLTOP -->
+<script>
+  $(document).ready(function () {
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 200) {
+        $('.scrolltop').fadeIn();
+      } else {
+        $('.scrolltop').fadeOut();
+      }
+    });
+
+    $('.scrolltop').click(function () {
+      $("html, body").animate({
+        scrollTop: 0
+      }, 600);
+      return false;
+    });
+
   });
 </script>
 </body>
