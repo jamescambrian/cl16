@@ -14,21 +14,21 @@
         <h3>Follow Us</h3>
         <?php wp_nav_menu( array( 'menu' => 'Follows' ) ); ?>
     </div>
-    <a class="scrolltop" id="scrolltop" href="#top"><img class="u-full-width" src="<?php echo get_bloginfo('template_directory'); ?>/images/scroll.png"/></a>
+    <!-- <a class="scrolltop" id="scrolltop" href="#top"><img class="u-full-width" src="<?php echo get_bloginfo('template_directory'); ?>/images/scroll.png"/></a> -->
 
 </div>
 </footer>
 
 </div>
 <?php wp_footer(); ?>
-
+</div>
 
 <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
  <!-- Pushy JS -->
-<script src="<?php echo get_bloginfo('template_directory'); ?>/js/pushy.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/classie.js"></script>
+<script src="<?php echo get_bloginfo('template_directory'); ?>/js/overnav.js"></script>
 <script>
     function init() {
         window.addEventListener('scroll', function(e){

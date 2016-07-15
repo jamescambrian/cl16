@@ -1,107 +1,3 @@
-/* IMPORTS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-@import 'modules/reset';
-@import 'base';
-@import 'modules/animations';
-@import 'modules/typography';
-@import 'modules/nav';
-@import 'grid';
-@import 'modules/pushynav';
-@import 'modules/buttons';
-@import 'modules/forms';
-@import 'mixins';
-@import 'modules/wp-standards';
-
-/* BASIC STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* NOTE
-html is set to 62.5% so that all the REM measurements throughout Skeleton
-are based on 10px sizing. So basically 1.5rem = 15px :) */
-html {
-  font-size: 62.5%;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-body {
-  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.6;
-  font-family: $font__sans-serif;
-  color: $color__black; 
-  background:$color__background;
-  margin: 0;
-  padding:0;
-}
-  figure{
-    margin: 0;
-  }
-/* LISTS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-ul {
-  list-style: none; }
-ol {
-  list-style: decimal inside; }
-ol, ul {
-  padding-left: 0;
-  margin-top: 0; }
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%;
-}
-li {
-  margin-bottom: 0.75rem;font-family: $font__serif; font-weight:200; }
-
-/* CODE
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-code {
-  padding: .2rem .5rem;
-  margin: 0 .2rem;
-  font-size: 90%;
-  white-space: nowrap;
-  background: #F1F1F1;
-  border: 1px solid #E1E1E1;
-  border-radius: 4px; }
-pre > code {
-  display: block;
-  padding: 1rem 1.5rem;
-  white-space: pre; }
-
-/* TABLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-th,
-td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #E1E1E1; }
-th:first-child,
-td:first-child {
-  padding-left: 0; }
-th:last-child,
-td:last-child {
-  padding-right: 0; }
-
-/* SPACING
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-button,
-.button {
- width: 100%; }
-input,
-textarea,
-select,
-fieldset {
-  margin-bottom: 1.5rem; }
-pre,
-blockquote,
-dl,
-figure,
-table,
-p,
-ul,
-ol,
-form {
-  margin-bottom: 2.5rem; }
 
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -167,12 +63,11 @@ header{
     margin-top: 0.3rem;
     left:-1rem;
     @include fade(0.3s);
-    -webkit-animation: fadein 1s 1 0.55s forwards; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 1s 1 0.55s forwards; /* Firefox < 16 */
-    -ms-animation: fadein 1s 1 0.55s forwards; /* Internet Explorer */
-    -o-animation: fadein 1s 1 0.55s forwards; /* Opera < 12.1 */ 
-    animation: fadein 1s 1 0.55s forwards;
-    opacity: 0;
+    // -webkit-animation: fadein 1s 1 0.55s forwards; /* Safari, Chrome and Opera > 12.1 */
+    // -moz-animation: fadein 1s 1 0.55s forwards; /* Firefox < 16 */
+    // -ms-animation: fadein 1s 1 0.55s forwards; /* Internet Explorer */
+    // animation: fadein 1s 1 0.55s forwards;
+    // opacity: 0;
     @media (#{$bp-larger-than-mobile}) {max-width: 40px;}
     @media (#{$bp-larger-than-phablet}) {max-width: 40px; top:0rem;}
     @media (#{$bp-larger-than-tablet}) {max-width: 70px;}
@@ -430,13 +325,15 @@ figcaption{
     text-align: center;
     position: relative;
     top:0rem;
-    transform: translateY(0%);}
+    @include transform-y(0%);
+  }
     @media (#{$bp-larger-than-tablet}) {padding: 6rem 3rem;}
     @media (#{$bp-larger-than-desktop}) {
       padding: 0 10rem;
       position: relative;
       top: 55%;
-      transform: translateY(-50%);}
+      @include transform-y(-50%);
+      }
     }
 .post__large--feat-img{
   background-size:cover!important;
@@ -464,10 +361,14 @@ figcaption{
   @media (#{$bp-larger-than-mobile}) {
     padding-top: 1.5rem;
     padding-bottom: 5.5rem;
+    padding-left:2rem;
+    padding-right:2rem;
   }
   @media (#{$bp-larger-than-tablet}) {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
+    padding-left:0rem;
+    padding-right:0rem;
   }
   p{ @media (#{$bp-larger-than-mobile}) {text-align: center;}
   @media (#{$bp-larger-than-tablet}) {text-align: left;}}
@@ -702,15 +603,16 @@ footer.foot{
   display: table;
   clear: both; }
 
-  // THIS IS A WEE TEST init
 
 
   .covers{
+    @media (#{$bp-larger-than-mobile}) {text-align:center;}
+      @media (#{$bp-larger-than-tablet}) {text-align:left;} 
     h2{
       font-size: 1.8rem;
       display: block;
       max-height: 25px;
-      overflow: hidden; 
+      overflow: hidden;
       a{
         color: $color__black;
         &:hover{
@@ -723,6 +625,7 @@ footer.foot{
         padding-bottom: 3.5rem;
         &:hover{
         color: $color__railred;
+        text-align: center;
         }      
       }
     h2.releases{
@@ -748,7 +651,7 @@ footer.foot{
   }
 
   .fuller{
-    @media (#{$bp-larger-than-mobile}) {padding:2%;
+    @media (#{$bp-larger-than-mobile}) {padding:0%;
     padding-top:4rem;}
     @media (#{$bp-larger-than-phablet}) {padding:4%;
     padding-top:16rem;}

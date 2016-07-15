@@ -1,3 +1,15 @@
+// standard fading
+@mixin fade($fade) {
+-webkit-transition: all $fade;
+transition: all $fade;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 @mixin darken($darken) {
  	-webkit-filter: $darken;
  	filter: $darken;}
@@ -8,4 +20,12 @@
      -moz-border-radius: $radius;
       -ms-border-radius: $radius;
           border-radius: $radius;
+}
+
+@mixin transform-y ($transform-y) {
+-webkit-transform:translateY($transform-y);
+    -moz-transform:translateY($transform-y);
+    -ms-transform:translateY($transform-y);
+    -o-transform:translateY($transform-y);
+    transform:translateY($transform-y);
 }
