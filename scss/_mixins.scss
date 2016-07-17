@@ -29,3 +29,11 @@ transition: all $fade;
     -o-transform:translateY($transform-y);
     transform:translateY($transform-y);
 }
+
+@mixin transform-x ($transform-x) {
+-webkit-transform:translateX($transform-x);
+    -moz-transform:translateX($transform-x);
+    -ms-transform:translateY($transform-x);
+    -o-transform:translateX($transform-x);
+    transform:translateX($transform-x);
+}

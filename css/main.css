@@ -308,7 +308,7 @@ p {
       font-size: 1.7rem; } }
   @media (min-width: 550px) {
     p {
-      font-size: 1.45rem; } }
+      font-size: 1.65rem; } }
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -533,8 +533,6 @@ h2.underline > a {
   position: absolute;
   z-index: 99;
   display: block;
-  width: 22px;
-  height: 22px;
   background: url(../images/menu__burger.png) no-repeat center center;
   background-size: contain;
   margin-top: 10px;
@@ -547,11 +545,15 @@ h2.underline > a {
   @media (min-width: 320px) {
     .menu-btn {
       top: 8px;
-      left: 15px; } }
+      left: 15px;
+      width: 30px;
+      height: 30px; } }
   @media (min-width: 750px) {
     .menu-btn {
       top: 25px;
-      left: 30px; } }
+      left: 30px;
+      width: 22px;
+      height: 22px; } }
 
 /* Overlay style */
 .overlay {
@@ -1368,37 +1370,42 @@ ul.release-covers {
 
 /* POST PAGE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.post {
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  position: relative;
-  left: 50%; }
-  .post .container {
-    padding: 0 1rem; }
-  .post h2 {
-    margin-bottom: 3rem; }
-    @media (min-width: 320px) {
-      .post h2 {
-        text-align: center;
-        border-bottom: solid 1px #231f20;
-        padding-bottom: 2.5rem; } }
-    @media (min-width: 1000px) {
-      .post h2 {
-        text-align: left; } }
-  .post h3, .post h5 {
-    font-size: 1.95rem;
-    letter-spacing: 0.002rem; }
-  .post a {
-    border-bottom: 1px solid #cf4a37; }
-    .post a:hover {
-      color: #231f20;
-      border-bottom: 1px solid #231f20; }
+@media (min-width: 320px) {
+  .post .row {
+    padding: 0 1rem; } }
+@media (min-width: 750px) {
+  .post {
+    margin-bottom: 4rem; }
+    .post .row {
+      padding: 0rem; } }
+.post h2 {
+  margin-bottom: 3rem; }
+  @media (min-width: 320px) {
+    .post h2 {
+      text-align: center;
+      padding-bottom: 1.5rem; } }
+  @media (min-width: 750px) {
+    .post h2 {
+      text-align: left; } }
+.post h3, .post h5 {
+  font-size: 1.95rem;
+  letter-spacing: 0.002rem; }
+.post a {
+  border-bottom: 1px solid #cf4a37; }
+  .post a:hover {
+    color: #231f20;
+    border-bottom: 1px solid #231f20; }
 
 .post__feat-img {
-  height: 500px;
+  margin-bottom: 4rem;
   background-size: cover !important;
-  background-position: center center !important;
-  margin-bottom: 4rem; }
+  background-position: center center !important; }
+  @media (min-width: 320px) {
+    .post__feat-img {
+      height: 250px; } }
+  @media (min-width: 750px) {
+    .post__feat-img {
+      height: 500px; } }
 
 .post__bandcamp-player {
   border: 0;
@@ -1517,7 +1524,7 @@ footer.foot {
 @media (min-width: 320px) {
   .mobile {
     display: block; } }
-@media (min-width: 550px) {
+@media (min-width: 1000px) {
   .mobile {
     display: none; } }
 
@@ -1571,8 +1578,13 @@ footer.foot {
 .covers p {
   display: block;
   overflow: hidden;
-  max-height: 95px;
   padding-top: 0.7rem; }
+  @media (min-width: 320px) {
+    .covers p {
+      height: auto; } }
+  @media (min-width: 750px) {
+    .covers p {
+      height: 95px; } }
 .covers img {
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
@@ -1597,6 +1609,11 @@ footer.foot {
   right: 4rem;
   width: 50px;
   text-align: center; }
+
+iframe {
+  padding: 2%;
+  width: 96%;
+  border: 1px solid #231f20; }
 
 
 

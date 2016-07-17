@@ -3,8 +3,6 @@
 	position:absolute;
     z-index: 99;
     display: block;
-    width:22px;
-    height:22px;
     background: url(../images/menu__burger.png) no-repeat center center;
     background-size: contain;
 	margin-top:10px;
@@ -13,8 +11,8 @@
 	text-align: center;
 	cursor: pointer;
 	@include fade(0.3s);
-	@media (#{$bp-larger-than-mobile}) {top:8px; left:15px;}
-	@media (#{$bp-larger-than-tablet}) {top:25px; left:30px;}
+	@media (#{$bp-larger-than-mobile}) {top:8px; left:15px;width:30px; height:30px;}
+	@media (#{$bp-larger-than-tablet}) {top:25px; left:30px;width:22px;height:22px;}
 }
 .menu-btn:hover{
 	
