@@ -294,12 +294,16 @@ figcaption{
 }
 .post__large {
   @media (#{$bp-larger-than-mobile}) {
-    height:560px;
     padding-top: 0rem;
     padding-bottom: 0rem;
     margin: 0;
     overflow:visible;
+    &:first-child {
+      margin-top: 10rem;
+    }
   }
+  @media (#{$bp-larger-than-tablet}) {height: 520px;}
+
   @media (#{$bp-larger-than-desktop}) {
     max-height: 768px;
     height: 100vh;
@@ -307,11 +311,14 @@ figcaption{
     padding-bottom: 0rem;
     margin: 0;
     overflow:hidden;
+    &:first-child {
+      margin-top: 0rem;
+    }
     }
   }
 .post__large--feat{
-  @media (#{$bp-larger-than-mobile}) {width:100%; height: 70%;}
-  @media (#{$bp-larger-than-desktop}) {width:50%;height:100%;}
+  @media (#{$bp-larger-than-mobile}) {width:100%; height:80%;}
+  @media (#{$bp-larger-than-tablet}) {width:50%;height:100%;}
   float:left; 
   display:block;
   width:50%;
@@ -339,6 +346,8 @@ figcaption{
     background-position:center center!important;
     repeat: no-repeat;
     overflow: hidden;
+    @media (#{$bp-larger-than-mobile}) {height:300px;}
+    @media (#{$bp-larger-than-tablet}) {height:100%;}
     @include fade(0.3s);
     .transparent-link{
       display:block;
@@ -664,8 +673,9 @@ footer.foot{
   .fuller{
     @media (#{$bp-larger-than-mobile}) {padding:0%;
     padding-top:4rem;}
-    @media (#{$bp-larger-than-phablet}) {padding:4%;
-    padding-top:16rem;}
+    @media (#{$bp-larger-than-mobile}) {padding:4%;padding-top:7rem;}
+    @media (#{$bp-larger-than-tablet}) {padding:4%;
+    padding-top:11rem;}
   }
 
   .orange{
