@@ -12,7 +12,7 @@
 	the_title();
 	echo '</h2></a>	';
 	echo '<p>';
-	echo  get_excerpt(130);
+	echo  get_excerpt(85);
 	echo '</p></div>';
 	echo "</div>";
 }

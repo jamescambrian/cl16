@@ -12,6 +12,7 @@
 	<div class="overlay overlay-contentpush">
 			<button type="button" class="overlay-close">Close</button>
 			<nav>
+				
 				<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 
 			</nav>

@@ -14,7 +14,7 @@
 	$key="Artist"; echo get_post_meta($post->ID, $key, true);
 	echo '</a>';
 	echo '<p>';
-	echo  get_excerpt(130);
+	echo  get_excerpt(85);
 	echo '</p></div>';
 	echo "</div>";
 }

@@ -102,8 +102,8 @@ background:none;
 }
 
 .button-read-more-cat{
-max-width: 170px;
-margin-left: 0.5rem!important;
+@media (#{$bp-larger-than-mobile}) {margin-bottom:4rem; max-width:50%; display:block; margin-top:1rem;}
+@media (#{$bp-larger-than-tablet}) {margin-left: 0.5rem;max-width: 170px;}
 }
 
 

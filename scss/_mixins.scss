@@ -10,9 +10,10 @@ transition: all $fade;
           border-radius: $radius;
 }
 
-@mixin darken($darken) {
- 	-webkit-filter: $darken;
- 	filter: $darken;}
+@mixin brightness($brightness) {
+ 	-webkit-filter: brightness($brightness); 
+          filter: brightness($brightness);
+        }
 
 
 @mixin border-radius($radius) {
