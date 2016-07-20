@@ -7,7 +7,7 @@ if ( is_home() ) {
     echo "role=";
     echo "main";
     echo ">";
-    get_template_part( 'featured' );
+    get_template_part( 'homepage' );
     echo "</section>";
 } else {
     // This is not the blog posts index
