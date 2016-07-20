@@ -127,8 +127,30 @@ header.smaller{
   background-color:$color__railblue;
 }
 
-.color-wrap--railred{
+.color-wrap--deep-purple{
+  background-color:$color__deep-purple;
+  .see-more{
+    color:$color__deep-purple--seemore;
+    border-bottom:1px solid $color__deep-purple;
+    &:hover{
+      color:white;
+      border-bottom:1px solid white;
+    }
+  }
+  .showtitle {
+    a{
+      color:$color__deep-purple--seemore;
+      &:hover{
+        color:$color__deep-purple--dj;
+      }
+    }
+  }
+  .showtitle__dj{  
+    color:$color__deep-purple--dj;
+  } 
+}
 
+.color-wrap--railred{
   background-color:$color__railred;
   .see-more{
     color:$color__railred--seemore;
@@ -192,39 +214,20 @@ figcaption{position:relative;
     width: 100%;
     display: block;
   }
-
   .showtitle{
   font-family: $font__sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   left:0;
-  letter-spacing:1.2px;
-  font-weight:400;
+  letter-spacing:1.3px;
   @include fade(0.3s);
-  a{
-    color:$color__background;
-    &:hover{
-      color:#FF9687;
-      font-weight: 400;
-    }
   }
-  
- 
-}
 .showtitle__dj{  
   font-family: $font__sans-serif;
   font-size:1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.15rem;
     padding-bottom:1rem;
-  a{
-    color:#FF9687;
-    padding-bottom:1rem;
-    &:hover{
-      color:$color__background;
-    }
-  }
-  
-} 
+  } 
 }
 
 
