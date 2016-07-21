@@ -26,6 +26,7 @@
 <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="<?php echo get_bloginfo('template_directory'); ?>/js/player.js"></script>
  <!-- Pushy JS -->
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/classie.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/overnav.js"></script>

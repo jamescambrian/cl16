@@ -23,6 +23,12 @@
   <div class="nine columns post fade-in-element">
     <div class="row">
       <h2><?php the_title(); ?></h2>
+      <?php 
+      $trackurl = get_post_meta($post->ID, 'camplayer', true);
+      if ($trackurl) {
+        include 'includes/player.php';
+      } ?>
+
       <?php the_content(); ?>
     </div>
   </div>

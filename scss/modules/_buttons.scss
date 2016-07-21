@@ -68,7 +68,7 @@ input[type="button"].button-primary:focus {
   }
 }
 
-.button-read-more{
+.button-read-more {
   max-width:140px;
   @media (#{$bp-larger-than-mobile}) {display:block!important;float:none;margin:0 auto; margin-top: 5.5rem;}
   @media (#{$bp-larger-than-tablet}) {float:right;display:inline-block; margin-top: 1.8rem;}
@@ -132,6 +132,8 @@ background:none;
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
+
+
 .hvr-sweep-to-right:before {
   content: "";
   position: absolute;
@@ -158,4 +160,15 @@ background:none;
 .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+.button__download{
+  text-decoration: none;
+  border:0!important;
+  text-align: right;
+  display: block;
+  font-size: 1.3rem;
+  padding:0;
+  margin: 1rem 0 0 0;
+
 }
