@@ -94,90 +94,65 @@ function posts_link_attributes_2() {
 
 
 
+///////audio
 
-// A U D I O P L A Y E R
-
-/* Fire our meta box setup function on the post editor screen. */
-add_action( 'load-post.php', 'cam_audio_setup' );
-add_action( 'load-post-new.php', 'cam_audio_setup' );
-
-/* Meta box setup function. */
-function cam_audio_setup() {
-
-  /* Add meta boxes on the 'add_meta_boxes' hook. */
-  add_action( 'add_meta_boxes', 'cam_add_post_meta_boxes' );
-  /* Save post meta on the 'save_post' hook. */
-  add_action( 'save_post', 'cam_save_post_meta', 10, 2 );
+add_action( 'add_meta_boxes', 'camplayer_meta_box_add' );
+function camplayer_meta_box_add()
+{
+    add_meta_box( 'camplayer', 'Cambrian Audio Player', 'camplayer_meta_box_cb', 'post', 'side', 'high' );
 }
 
-/* Create one or more meta boxes to be displayed on the post editor screen. */
-function cam_add_post_meta_boxes() {
-
-  add_meta_box(
-    'camplayer',      // Unique ID
-    esc_html__( 'Cam Mini Audio Player', 'example' ),    // Title
-    'cam_meta_box',   // Callback function
-    'post',         // Admin page (or post type)
-    'side',         // Context
-    'high'         // Priority
-  );
+function camplayer_meta_box_cb()
+{
+    // $post is already set, and contains an object: the WordPress post
+    global $post;
+    $values = get_post_custom( $post->ID );
+    $playertitle = isset( $values['camplayer_title'] ) ? esc_attr( $values['camplayer_title'][0] ) : '';
+    $playerurl = isset( $values['camplayer_url'] ) ? esc_attr( $values['camplayer_url'][0] ) : '';
 
 
-}
 
-/* Display the post meta box. */
-function cam_meta_box( $object, $box ) { ?>
-
-  <?php wp_nonce_field( basename( __FILE__ ), 'cam_nonce' ); ?>
-
-
-  <p>
-    <label for="camplayer"><?php _e( "Paste Audio URL Below:", 'example' ); ?></label>
-    <br /><br />
+     
+    // We'll use this nonce field later on when saving.
+    wp_nonce_field( 'camplayer_meta_box_nonce', 'meta_box_nonce' );
+    ?>
+    <p>
+        <label for="camplayer_title">Title</label>
+        <input input class="widefat" type="text" name="camplayer_title" id="camplayer_title" value="<?php echo $playertitle; ?>" />
+    </p>
+    <p>
+        <label for="camplayer_url">URL</label>
+        <input input class="widefat" type="text" name="camplayer_url" id="camplayer_url" value="<?php echo $playerurl; ?>" />
+    </p>
+     
     
-  <input class="widefat" type="text" name="camplayer" id="camplayer" value="<?php echo esc_attr( get_post_meta( $object->ID, 'camplayer', true ) ); ?>" size="30" />
-  </p>
-
-
-
-
-<?php }
-
-
-
-/* Save the meta box's post metadata. */
-function cam_save_post_meta( $post_id, $post ) {
-
-  /* Verify the nonce before proceeding. */
-  if ( !isset( $_POST['cam_nonce'] ) || !wp_verify_nonce( $_POST['cam_nonce'], basename( __FILE__ ) ) )
-    return $post_id;
-
-  /* Get the post type object. */
-  $post_type = get_post_type_object( $post->post_type );
-
-  /* Check if the current user has permission to edit the post. */
-  if ( !current_user_can( $post_type->cap->edit_post, $post_id ) )
-    return $post_id;
-
-  /* Get the posted data and sanitize it for use as an HTML class. */
-  $new_meta_value = ( $_POST['camplayer'] );
-
-  /* Get the meta key. */
-  $meta_key = 'camplayer';
-
-  /* Get the meta value of the custom field key. */
-  $meta_value = get_post_meta( $post_id, $meta_key, true );
-
-  /* If a new meta value was added and there was no previous value, add it. */
-  if ( $new_meta_value && '' == $meta_value )
-    add_post_meta( $post_id, $meta_key, $new_meta_value, true );
-
-  /* If the new meta value does not match the old value, update it. */
-  elseif ( $new_meta_value && $new_meta_value != $meta_value )
-    update_post_meta( $post_id, $meta_key, $new_meta_value );
-
-  /* If there is no new meta value but an old value exists, delete it. */
-  elseif ( '' == $new_meta_value && $meta_value )
-    delete_post_meta( $post_id, $meta_key, $meta_value );
+    <?php    
 }
+
+
+add_action( 'save_post', 'camplayer_meta_box_save' );
+function camplayer_meta_box_save( $post_id )
+{
+    // Bail if we're doing an auto save
+    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+     
+    // if our nonce isn't there, or we can't verify it, bail
+    if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'camplayer_meta_box_nonce' ) ) return;
+     
+    // if our current user can't edit this post, bail
+    if( !current_user_can( 'edit_post', $post_id ) ) return;
+
+    
+
+    // Make sure your data is set before trying to save it
+    if( isset( $_POST['camplayer_title'] ) )
+        update_post_meta( $post_id, 'camplayer_title', esc_attr( $_POST['camplayer_title'] ) );
+    if( isset( $_POST['camplayer_url'] ) )
+        update_post_meta( $post_id, 'camplayer_url', esc_attr( $_POST['camplayer_url']) );  
+}
+ 
+
+
+
+
 

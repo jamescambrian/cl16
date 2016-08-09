@@ -24,7 +24,7 @@
     <div class="row">
       <h2><?php the_title(); ?></h2>
       <?php 
-      $trackurl = get_post_meta($post->ID, 'camplayer', true);
+      $trackurl = get_post_meta($post->ID, 'camplayer_url', true);
       if ($trackurl) {
         include 'includes/player.php';
       } ?>

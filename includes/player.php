@@ -1,5 +1,4 @@
 
-<?php the_meta(); ?>
 <div id="player__mini--light">
             <div id="audio-image">
        <!--  <img class="cover" /> -->
@@ -13,7 +12,7 @@
          </div>
          <div class="playlist__container fade-in-element">
             <ul id="player--playlist" class="hidden">
-                <li song="<?php echo $trackurl;?>" artist=""><?php $key="camplayertitle"; echo get_post_meta($post->ID, $key, true); ?></li>
+                <li song="<?php echo $trackurl;?>" artist=""><?php $key="camplayer_title"; echo get_post_meta($post->ID, $key, true); ?></li>
             </ul>      </div>
             <div id="tracker">
                 <div id="progressBar">
