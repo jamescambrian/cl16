@@ -245,7 +245,7 @@ figcaption{position:relative;
     margin: 0;
     overflow:visible;
     &:first-child {
-      margin-top: 10rem;
+      margin-top: 6rem;
     }
   }
   @media (#{$bp-larger-than-tablet}) {height: 520px;}
@@ -649,9 +649,7 @@ footer.foot{
   }
 
   iframe{
-    padding: 2%;
-    width: 96%;
-    border: 1px solid $color__black;
+    width: 98%;
   }
 
 

@@ -613,7 +613,7 @@ a.underline {
   backface-visibility: hidden; }
 
 .overlay ul li a {
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
   display: block;
@@ -1284,7 +1284,7 @@ ul.podcast-covers {
     margin: 0;
     overflow: visible; }
     .post__large:first-child {
-      margin-top: 10rem; } }
+      margin-top: 6rem; } }
 @media (min-width: 750px) {
   .post__large {
     height: 520px; } }
@@ -1668,9 +1668,7 @@ footer.foot {
   text-align: center; }
 
 iframe {
-  padding: 2%;
-  width: 96%;
-  border: 1px solid #231f20; }
+  width: 98%; }
 
 
 
