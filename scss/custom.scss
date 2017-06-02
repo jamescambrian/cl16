@@ -30,14 +30,14 @@ hr {
 /*header section*/
 header{
     z-index: 30;
-    background: $color__railred ;
+    background: $color__black;
     width: 100%;
     padding: 1rem;
     position: fixed;
     text-align: center;
     top: 0;
     @media (#{$bp-larger-than-mobile}) {height: 4.8rem;}
-    @media (#{$bp-larger-than-tablet}) {height: 8rem;}
+    @media (#{$bp-larger-than-tablet}) {height: 4rem;}
     /*drop the header*/
     -moz-animation-name: dropHeader;
     -moz-animation-iteration-count: 1;
@@ -69,6 +69,13 @@ header{
       opacity: 0.8;
     }
       }
+
+    .menu{
+        ul li {
+            display:inline;
+            a{color:$color__background;}
+        }
+    }
 }
 header.smaller{
   height: 0rem;
