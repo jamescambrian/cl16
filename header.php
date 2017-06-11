@@ -35,8 +35,10 @@
 <div id="container">
 <header id="header" class="header">
 <!--    <div id="trigger-overlay" class="menu-btn"></div>-->
-    <div class="menu"><?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?></div>
-<!--	<a class="" href="<?php echo site_url(); ?>"><img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.png" data-pin-nopin="true"></a>-->
+
+	<a class="" href="<?php echo site_url(); ?>"><img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.png" data-pin-nopin="true"></a>
+        <div class="menu desktop"><?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?></div>
+
 </header>
 <!-- Top Nav Ends -->
 <div id="container"></p>

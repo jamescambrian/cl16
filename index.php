@@ -4,7 +4,7 @@ if ( is_home() ) {
     // This is the blog posts index
     echo "<section id=";
     echo "content";
-    echo "role=";
+    echo " role=";
     echo "main";
     echo ">";
     get_template_part( 'homepage' );
@@ -13,7 +13,7 @@ if ( is_home() ) {
     // This is not the blog posts index
     echo "<section id=";
     echo "content";
-    echo "role=";
+    echo " role=";
     echo "main";
     echo ">";
     get_template_part( 'entry' );

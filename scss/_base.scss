@@ -1,7 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700|Merriweather:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700|Cutive+Mono);
 // global fonts
 $font__sans-serif:"Lato",sans-serif;
-$font__serif:"Merriweather", serif;
+$font__serif:‘Courier New’, Courier, monospace;
 $font__title:"Open Sans", sans-serif;
 
 
@@ -40,7 +40,7 @@ html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%;
-  text-rendering: optimizeLegibility;
+//  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 body {
