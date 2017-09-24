@@ -29,7 +29,7 @@ while($catquery->have_posts()) : $catquery->the_post();
   </a>
   <div class="post__large--feat">
     <div class="post__large--excerpt">
-        <span class="home__cat__title">Latest News</span>  
+        <span class="home__cat__title">News</span>  
       <h2><a href="<?php the_permalink(); ?>" class="titles"><?php the_title(); ?></a></h2>
       <?php the_excerpt(); ?>
       <a class="button button-read-more button-read-more-feat hvr-sweep-to-right " href="<?php the_permalink(); ?> ">read more</a>
@@ -48,7 +48,7 @@ while($catquery->have_posts()) : $catquery->the_post();
     <div class="container">
         <div class="row wrap-title">
             <img class="logo-small" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.png">
-            <h2>Latest Radio</h2>
+            <h2>Radio</h2>
             <br>
             <span>
                 <a class="see-more" href="<?php echo site_url(); ?>/category/radio/">See all Radio shows</a></span>
@@ -82,7 +82,7 @@ while($catquery->have_posts()) : $catquery->the_post();
 <div class="post__large fade-in-element">
   <div class="post__large--feat">
     <div class="post__large--excerpt">
-    <span class="home__cat__title">Latest mixtape</span>  
+    <span class="home__cat__title">Mixtapes</span>  
       <h2><a href="<?php the_permalink(); ?>" class="titles"><?php the_title(); ?></a></h2>
       <?php the_excerpt(); ?>
       <a class="button button-read-more button-read-more-feat hvr-sweep-to-right " href="<?php the_permalink(); ?> ">read more</a>
@@ -103,6 +103,7 @@ while($catquery->have_posts()) : $catquery->the_post();
 <!-- Radio Section Begins -->
  <div class="color-wrap color-wrap--yellow">
   <div class="container">
+      <span class="home__cat__title">BLOG</span> 
   <div class="row cover-list">
     <ul class="podcast-covers">
       <?php

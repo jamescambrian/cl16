@@ -30,6 +30,9 @@
  <!-- Pushy JS -->
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/classie.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/overnav.js"></script>
+<!--add classy script only on home-->
+
+<?php if( is_front_page() && is_home() ) { ?>
 <script>
     function init() {
         window.addEventListener('scroll', function(e){
@@ -47,6 +50,10 @@
     }
     window.onload = init();
 </script>
+<?php } else { ?>
+<!--oi-->
+<?php } ?>
+
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery.waypoints.min.js"></script>
 <script>
   $(function () {

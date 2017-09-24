@@ -20,25 +20,34 @@
 </script>
 </head>
 <body id="top">
-<!--
-	<div class="overlay overlay-contentpush">
-			<button type="button" class="overlay-close">Close</button>
-			<nav>
-				
-				<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+    <div class="body-border body-border--top"></div>
+    <div class="body-border body-border--left"></div>
+    <div class="body-border body-border--right"></div>
+    <div class="body-border body-border--bottom"></div>
+    <div class="wrap">
 
-			</nav>
-		</div>
--->
-<div class="wrap">
+
 <!-- Site Wrap -->
 <div id="container">
+    
+<?php if( is_front_page() && is_home() ) { ?>
 <header id="header" class="header">
-<!--    <div id="trigger-overlay" class="menu-btn"></div>-->
-
-	<a class="" href="<?php echo site_url(); ?>"><img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.png" data-pin-nopin="true"></a>
+    <a class="" href="<?php echo site_url(); ?>"><img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.png" data-pin-nopin="true"></a>
         <div class="menu desktop"><?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?></div>
 
 </header>
+<?php } else { ?>
+<header id="header-small" class="smaller">
+    <a class="" href="<?php echo site_url(); ?>"><img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.png" data-pin-nopin="true"></a>
+        <div class="menu desktop"><?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?></div>
+
+</header>
+<?php } ?>
+
+
+    
+    
+    
+    
 <!-- Top Nav Ends -->
-<div id="container"></p>
+<div id="container">
