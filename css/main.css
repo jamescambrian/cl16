@@ -1154,8 +1154,7 @@ header {
         display: none; } }
 
 header.smaller {
-  background: #231f20;
-  margin-top: -15px; }
+  background: #231f20; }
 
 /* COLOR WRAPS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -1748,8 +1747,8 @@ iframe {
 
 .body-border {
   position: fixed;
-  z-index: 29;
-  background-color: #231f20; }
+  z-index: 50;
+  background-color: white; }
   @media (min-width: 320px) {
     .body-border {
       display: none; } }

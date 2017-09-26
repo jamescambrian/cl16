@@ -105,7 +105,7 @@ header{
 }
 header.smaller{
     background:$color--black;
-    margin-top: -15px;
+//    margin-top: -15px;
 //  height: 0rem;
 
   .logo{
@@ -777,8 +777,8 @@ footer.foot{
 .body-border{
     @media (#{$bp-larger-than-mobile}) {display:none;}
     @media (#{$bp-larger-than-tablet}) {display:block;}
-    position:fixed;z-index:29;
-    background-color:$color__black;
+    position:fixed;z-index:50;
+    background-color:white;
     &--top{top:0; width:100%; height:15px;}
     &--right{right:0; height:100%; width:15px;}
     &--left{left:0; height:100%; width:15px;}
